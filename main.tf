@@ -11,8 +11,8 @@ data "aws_ami" "amzlinux" {
 resource "aws_instance" "prd-spoke1" {
   ami = data.aws_ami.amzlinux.id
   instance_type = "${var.instance_type}"
-  subnet_id =  "${subnet_id}"
-  key_name = "${key_name}"
+  subnet_id =  "${var.subnet_id}"
+  key_name = "${var.key_name}"
   associate_public_ip_address = "${var.associate_public_ip_address}"
   vpc_security_group_ids = ["${var.vpc_security_group_ids}"]
   tags = {
