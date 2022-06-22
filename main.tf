@@ -1,7 +1,7 @@
 #data "aws_region" "current" {}
 
 data "aws_ami" "amzlinux" {
-    owners = ["${var.ownwer}"]
+    owners = ["${var.owner}"]
     filter {
       name = "description"
       values = ["${var.image_desc}"]
