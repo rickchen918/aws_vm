@@ -105,6 +105,8 @@ resource "azurerm_linux_virtual_machine" "deault" {
     version   = var.ver
   }
 
+  tags = var.tags
+
   depends_on = [
     azurerm_network_security_group.default,
     azurerm_public_ip.default,

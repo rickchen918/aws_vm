@@ -67,7 +67,7 @@ variable "public_ip" {
 }
 
 variable "tags" {
-  type = map
+  type = map(string)
   default = null
   description = "tags "
 }

@@ -43,3 +43,8 @@ variable "ssh_source" {
   type = list
   default = null
 }
+
+variable "tags" {
+  type = map(string)
+  default = {}
+}

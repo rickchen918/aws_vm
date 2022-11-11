@@ -42,7 +42,5 @@ resource "aws_instance" "default" {
   key_name = var.key_name
   associate_public_ip_address = "${var.associate_public_ip_address}"
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
-  tags = {
-    Name = "${var.name}"
-  }
+  tags = var.tags
 }
